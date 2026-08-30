@@ -4,7 +4,7 @@
 
   var PHONE_DISPLAY = "+1 (672) 377-3932";
   var PHONE_TEL = "+16723773932";
-  var EMAIL = "Wiiliam905462@gmail.com";
+  var EMAIL = "poshpassagelimosines@gmail.com";
 
   document.addEventListener("DOMContentLoaded", function () {
     initHeader();
