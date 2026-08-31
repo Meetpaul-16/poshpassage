@@ -107,13 +107,32 @@ export default function App() {
     });
     const date = bookingForm?.querySelector("#pickup-date");
     if (date) date.min = new Date().toISOString().slice(0, 10);
-    const submitBooking = (event) => {
+    const submitBooking = async (event) => {
       event.preventDefault();
       if (!bookingForm.reportValidity()) return;
-      const form = Object.fromEntries(new FormData(bookingForm));
-      window.location.href = mailto(`New ride request — ${form.name || "New client"} (${form["pickup-date"] || "date TBD"})`, [
-        "New booking request from poshpassagelimousines.com", "", `Name: ${form.name || ""}`, `Phone: ${form.phone || ""}`, `Email: ${form.email || ""}`, "", `Occasion: ${form.occasion || ""}`, `Vehicle preference: ${form.vehicle || ""}`, `Trip type: ${form["trip-type"] || ""}`, "", `Pickup date: ${form["pickup-date"] || ""}`, `Pickup time: ${form["pickup-time"] || ""}`, `Passengers: ${form.passengers || ""}`, "", `Pickup location: ${form.pickup || ""}`, `Drop-off location: ${form.dropoff || ""}`, "", `Notes: ${form.notes || "—"}`,
-      ]);
+      const button = bookingForm.querySelector('button[type="submit"]');
+      const note = bookingForm.querySelector(".form-note");
+      button.disabled = true;
+      button.textContent = "Sending request…";
+      try {
+        const booking = Object.fromEntries(new FormData(bookingForm));
+        const response = await fetch("/api/booking", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(booking),
+        });
+        const result = await response.json();
+        if (!response.ok || !result.success) throw new Error(result.message || "Unable to send your request.");
+        bookingForm.reset();
+        note.textContent = "Thanks — your ride request has been sent. We'll reply shortly.";
+        note.classList.add("is-visible");
+      } catch (error) {
+        note.textContent = "We couldn't send the request right now. Please call (672) 377-3932 or email us directly.";
+        note.classList.add("is-visible");
+      } finally {
+        button.disabled = false;
+        button.textContent = "Request This Ride";
+      }
     };
     bookingForm?.addEventListener("submit", submitBooking);
     const contactForm = root.querySelector("#contact-form");
