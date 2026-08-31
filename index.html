@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<template id="home-template">
 
 <header class="site-header">
   <div class="container">
@@ -62,7 +63,7 @@
         </ul>
       </div>
     </div>
-    <div class="skyline-wrap">
+    <!-- <div class="skyline-wrap">
       <svg viewBox="0 0 1440 400" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMax slice">
         <g fill="#f2f0ea" opacity="0.5">
           <circle cx="120" cy="60" r="1.2"/><circle cx="260" cy="110" r="1"/><circle cx="340" cy="40" r="1.3"/>
@@ -97,11 +98,11 @@
           <rect x="990" y="220" width="2" height="3"/><rect x="1150" y="270" width="2" height="3"/><rect x="1290" y="335" width="2" height="3"/>
         </g>
       </svg>
-    </div>
+    </div> -->
   </section>
 
   <!-- QUICK FACTS -->
-  <section class="section-tight">
+  <!-- <section class="section-tight">
     <div class="container">
       <hr class="trim">
       <div class="stat-row" style="justify-content:space-between;">
@@ -111,7 +112,7 @@
         <div><b>1</b><span>Call Away — (672) 377-3932</span></div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- SERVICES TEASER -->
   <section>
@@ -322,6 +323,8 @@
   </div>
 </footer>
 
-<script src="main.js"></script>
+</template>
+<div id="root"></div>
+<script type="module" src="/src/main.jsx"></script>
 </body>
 </html>

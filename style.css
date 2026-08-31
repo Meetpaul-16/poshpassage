@@ -306,6 +306,8 @@ section{ padding:96px 0; }
   position:relative;
   overflow:hidden;
   padding-top:88px;
+  /* The skyline is optional; don't retain the section's default bottom padding when it is hidden. */
+  padding-bottom:0;
   background:radial-gradient(120% 100% at 15% 0%, #171a22 0%, var(--midnight) 55%);
 }
 .hero .container{
