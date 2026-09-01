@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import home from "../index.html?raw";
 import about from "../about.html?raw";
 import services from "../services.html?raw";
 import fleet from "../fleet.html?raw";
@@ -7,8 +8,7 @@ import faq from "../faq.html?raw";
 import contact from "../contact.html?raw";
 
 const pages = {
-  "/": { title: "Posh Passage Limousines", template: null },
-  "/index.html": { title: "Posh Passage Limousines", template: null },
+  "/home": { title: "Posh Passage Limousines", template: home },
   "/about": { title: "About Us | Posh Passage Limousines", template: about },
   "/about.html": { title: "About Us | Posh Passage Limousines", template: about },
   "/services": { title: "Services | Posh Passage Limousines", template: services },
@@ -23,27 +23,46 @@ const pages = {
   "/contact.html": { title: "Contact Us | Posh Passage Limousines", template: contact },
 };
 
-const email = "poshpassagelimosines@gmail.com";
-const tel = "+16723773932";
+const legacyRoutes = {
+  "/": "/home",
+  "/index.html": "/home",
+  "/home.html": "/home",
+  "/about.html": "/about",
+  "/services.html": "/services",
+  "/service": "/services",
+  "/service.html": "/services",
+  "/fleet.html": "/fleet",
+  "/book-a-ride.html": "/book-a-ride",
+  "/faq.html": "/faq",
+  "/contact.html": "/contact",
+};
+
+function cleanLocation(value) {
+  const url = new URL(value, window.location.origin);
+  return `${legacyRoutes[url.pathname] || url.pathname}${url.search}`;
+}
 
 function bodyOf(documentHtml) {
   const parsed = new DOMParser().parseFromString(documentHtml, "text/html");
   parsed.querySelectorAll("script").forEach((script) => script.remove());
-  return parsed.querySelector("template#page-template")?.innerHTML || parsed.body.innerHTML;
-}
-
-function mailto(subject, lines) {
-  return `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.filter(Boolean).join("\n"))}`;
+  return parsed.querySelector("template#page-template, template#home-template")?.innerHTML || parsed.body.innerHTML;
 }
 
 export default function App() {
   const [location, setLocation] = useState(() => window.location.pathname + window.location.search);
-  const path = location.split("?")[0];
-  const page = pages[path] || pages["/"];
+  const path = cleanLocation(location).split("?")[0];
+  const page = pages[path] || pages["/home"];
   const html = useMemo(() => {
-    if (page.template) return bodyOf(page.template);
-    return document.getElementById("home-template")?.innerHTML || "";
+    return bodyOf(page.template || home);
   }, [page]);
+
+  useEffect(() => {
+    const canonicalLocation = cleanLocation(location);
+    if (canonicalLocation !== location) {
+      history.replaceState({}, "", canonicalLocation);
+      setLocation(canonicalLocation);
+    }
+  }, [location]);
 
   useEffect(() => {
     document.title = page.title;
@@ -85,16 +104,18 @@ export default function App() {
     root.querySelectorAll(".reveal").forEach((element) => observer ? observer.observe(element) : element.classList.add("in"));
     root.querySelectorAll("[data-year]").forEach((element) => { element.textContent = new Date().getFullYear(); });
 
-    const selected = path === "/" ? "index.html" : path.slice(1).replace(/\/$/, "") + (path.endsWith(".html") ? "" : ".html");
-    nav?.querySelectorAll("a[href]").forEach((anchor) => anchor.classList.toggle("is-active", anchor.getAttribute("href") === selected));
+    nav?.querySelectorAll("a[href]").forEach((anchor) => {
+      anchor.classList.toggle("is-active", cleanLocation(anchor.getAttribute("href")) === path);
+    });
     const onClick = (event) => {
       const anchor = event.target.closest("a[href]");
       if (!anchor || anchor.target === "_blank" || event.metaKey || event.ctrlKey) return;
       const href = anchor.getAttribute("href");
       if (!href?.endsWith(".html") && !href?.includes(".html?")) return;
       event.preventDefault();
-      history.pushState({}, "", `/${href}`);
-      setLocation(window.location.pathname + window.location.search);
+      const destination = cleanLocation(href);
+      history.pushState({}, "", destination);
+      setLocation(destination);
       closeNav();
     };
     root.addEventListener("click", onClick);
