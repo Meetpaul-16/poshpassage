@@ -136,10 +136,32 @@ export default function App() {
     };
     bookingForm?.addEventListener("submit", submitBooking);
     const contactForm = root.querySelector("#contact-form");
-    const submitContact = (event) => {
-      event.preventDefault(); if (!contactForm.reportValidity()) return;
-      const form = Object.fromEntries(new FormData(contactForm));
-      window.location.href = mailto(`Website message from ${form.name || "a visitor"}`, ["New message from poshpassagelimousines.com", "", `Name: ${form.name || ""}`, `Phone: ${form.phone || ""}`, `Email: ${form.email || ""}`, "", "Message:", form.message || ""]);
+    const submitContact = async (event) => {
+      event.preventDefault();
+      if (!contactForm.reportValidity()) return;
+      const button = contactForm.querySelector('button[type="submit"]');
+      const note = contactForm.querySelector(".form-note");
+      button.disabled = true;
+      button.textContent = "Sending message…";
+      try {
+        const query = Object.fromEntries(new FormData(contactForm));
+        const response = await fetch("/api/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(query),
+        });
+        const result = await response.json();
+        if (!response.ok || !result.success) throw new Error(result.message || "Unable to send your message.");
+        contactForm.reset();
+        note.textContent = "Thanks — your message has been sent. We'll reply shortly.";
+        note.classList.add("is-visible");
+      } catch (error) {
+        note.textContent = "We couldn't send your message right now. Please call (672) 377-3932 or email us directly.";
+        note.classList.add("is-visible");
+      } finally {
+        button.disabled = false;
+        button.textContent = "Send Message";
+      }
     };
     contactForm?.addEventListener("submit", submitContact);
     const details = [...root.querySelectorAll(".faq-list details")];

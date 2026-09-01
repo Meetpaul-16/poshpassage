@@ -122,7 +122,7 @@
         <p class="lede">For a full ride request with dates and vehicle details, use our <a href="book-a-ride.html" style="color:var(--ivory); text-decoration:underline;">booking form</a> instead.</p>
       </div>
       <div class="form-panel reveal" style="max-width:640px;">
-        <form id="contact-form" novalidate>
+        <form id="contact-form" action="/api/contact" method="POST">
           <div class="field-row">
             <div class="field">
               <label for="c-name">Full name <span class="req">*</span></label>

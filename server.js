@@ -228,6 +228,89 @@ app.post("/api/booking", async (request, response) => {
 
 /*
 |--------------------------------------------------------------------------
+| Contact query API
+|--------------------------------------------------------------------------
+*/
+
+app.post("/api/contact", async (request, response) => {
+  console.log("📩 Contact query received");
+
+  const query = Object.fromEntries(
+    Object.entries(request.body || {}).map(([key, value]) => [
+      key,
+      clean(value),
+    ]),
+  );
+
+  const missing = ["name", "email", "message"].filter(
+    (field) => !query[field],
+  );
+
+  if (missing.length) {
+    return response.status(400).json({
+      success: false,
+      message: "Please complete all required fields.",
+      missing,
+    });
+  }
+
+  if (requiredEnvironment.some((key) => !process.env[key])) {
+    console.error("❌ SMTP configuration is missing.");
+
+    return response.status(500).json({
+      success: false,
+      message: "Email service is not configured yet.",
+    });
+  }
+
+  const subject = `New Website Query – ${safeSubject(query.name)}`;
+  const text = [
+    "NEW WEBSITE QUERY",
+    "─────────────────",
+    "",
+    "CUSTOMER INFORMATION",
+    `Name: ${query.name}`,
+    `Phone: ${query.phone || "Not provided"}`,
+    `Email: ${query.email}`,
+    "",
+    "MESSAGE",
+    query.message,
+    "",
+    "─────────────────",
+    "Posh Passage Limousines",
+    "Contact query received from website",
+  ].join("\n");
+
+  try {
+    console.log("📤 Sending contact query email...");
+
+    const info = await transporter.sendMail({
+      from: `Posh Passage Limousines Website <${process.env.SMTP_USER}>`,
+      to: process.env.BOOKING_EMAIL || process.env.SMTP_USER,
+      replyTo: query.email,
+      subject,
+      text,
+    });
+
+    console.log("✅ Contact query email sent:", info.messageId);
+
+    return response.status(201).json({
+      success: true,
+      message: "Your message has been sent.",
+    });
+  } catch (error) {
+    console.error("❌ Contact query email failed:");
+    console.error(error);
+
+    return response.status(502).json({
+      success: false,
+      message: "Unable to send your message.",
+    });
+  }
+});
+
+/*
+|--------------------------------------------------------------------------
 | Serve React/Vite production build
 |--------------------------------------------------------------------------
 */
