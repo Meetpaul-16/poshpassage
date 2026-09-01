@@ -12,12 +12,11 @@
   },
   "dependencies": {
     "@vitejs/plugin-react": "latest",
-    "vite": "latest",
-    "react": "latest",
-    "react-dom": "latest",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
-    "nodemailer": "^6.10.0"
-  },
-  "devDependencies": {}
+    "nodemailer": "^6.10.1",
+    "react": "latest",
+    "react-dom": "latest",
+    "vite": "latest"
+  }
 }
