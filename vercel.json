@@ -6,27 +6,27 @@
     },
     {
       "source": "/fleet",
-      "destination": "/fleet.html"
+      "destination": "/index.html"
     },
     {
       "source": "/about",
-      "destination": "/about.html"
+      "destination": "/index.html"
     },
     {
       "source": "/book-a-ride",
-      "destination": "/book-a-ride.html"
+      "destination": "/index.html"
     },
     {
       "source": "/contact",
-      "destination": "/contact.html"
+      "destination": "/index.html"
     },
     {
       "source": "/faq",
-      "destination": "/faq.html"
+      "destination": "/index.html"
     },
     {
       "source": "/services",
-      "destination": "/services.html"
+      "destination": "/index.html"
     }
   ]
 }
