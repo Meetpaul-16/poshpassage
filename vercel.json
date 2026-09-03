@@ -1,31 +1,43 @@
 {
   "rewrites": [
     {
+      "source": "/robots.txt",
+      "destination": "/api/robots"
+    },
+    {
+      "source": "/sitemap.xml",
+      "destination": "/api/sitemap"
+    },
+    {
         "source":"/home",
         "destination":"/index.html"
     },
     {
       "source": "/fleet",
-      "destination": "/index.html"
+      "destination": "/fleet.html"
     },
     {
       "source": "/about",
-      "destination": "/index.html"
+      "destination": "/about.html"
     },
     {
       "source": "/book-a-ride",
-      "destination": "/index.html"
+      "destination": "/book-a-ride.html"
     },
     {
       "source": "/contact",
-      "destination": "/index.html"
+      "destination": "/contact.html"
     },
     {
       "source": "/faq",
-      "destination": "/index.html"
+      "destination": "/faq.html"
     },
     {
       "source": "/services",
+      "destination": "/services.html"
+    },
+    {
+      "source": "/",
       "destination": "/index.html"
     }
   ]

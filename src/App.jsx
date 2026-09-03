@@ -8,19 +8,19 @@ import faq from "../faq.html?raw";
 import contact from "../contact.html?raw";
 
 const pages = {
-  "/home": { title: "Posh Passage Limousines", template: home },
-  "/about": { title: "About Us | Posh Passage Limousines", template: about },
-  "/about.html": { title: "About Us | Posh Passage Limousines", template: about },
-  "/services": { title: "Services | Posh Passage Limousines", template: services },
-  "/services.html": { title: "Services | Posh Passage Limousines", template: services },
-  "/fleet": { title: "Our Fleet | Posh Passage Limousines", template: fleet },
-  "/fleet.html": { title: "Our Fleet | Posh Passage Limousines", template: fleet },
-  "/book-a-ride": { title: "Book a Ride | Posh Passage Limousines", template: booking },
-  "/book-a-ride.html": { title: "Book a Ride | Posh Passage Limousines", template: booking },
-  "/faq": { title: "FAQ | Posh Passage Limousines", template: faq },
-  "/faq.html": { title: "FAQ | Posh Passage Limousines", template: faq },
-  "/contact": { title: "Contact Us | Posh Passage Limousines", template: contact },
-  "/contact.html": { title: "Contact Us | Posh Passage Limousines", template: contact },
+  "/home": { title: "Limousine & Party Bus Service in Surrey, BC | Posh Passage", description: "Book a chauffeured limousine or party bus in Surrey, Metro Vancouver and the Lower Mainland. Airport transfers, weddings, wine tours and Whistler trips.", template: home },
+  "/about": { title: "About Our Surrey Chauffeur Service | Posh Passage Limousines", description: "Learn about Posh Passage Limousines, a Surrey-based chauffeur service providing punctual, professional travel across Metro Vancouver and the Lower Mainland.", template: about },
+  "/about.html": { title: "About Our Surrey Chauffeur Service | Posh Passage Limousines", description: "Learn about Posh Passage Limousines, a Surrey-based chauffeur service providing punctual, professional travel across Metro Vancouver and the Lower Mainland.", template: about },
+  "/services": { title: "Limousine & Party Bus Services in Metro Vancouver | Posh Passage", description: "Chauffeured airport transfers, wedding limos, corporate travel, party buses, wine tours and Whistler trips from Surrey across Metro Vancouver and the Lower Mainland.", template: services },
+  "/services.html": { title: "Limousine & Party Bus Services in Metro Vancouver | Posh Passage", description: "Chauffeured airport transfers, wedding limos, corporate travel, party buses, wine tours and Whistler trips from Surrey across Metro Vancouver and the Lower Mainland.", template: services },
+  "/fleet": { title: "Stretch Limousines & Party Buses in Surrey, BC | Posh Passage", description: "Explore Posh Passage stretch limousines and party buses for weddings, airport transfers, group outings and events throughout the Lower Mainland.", template: fleet },
+  "/fleet.html": { title: "Stretch Limousines & Party Buses in Surrey, BC | Posh Passage", description: "Explore Posh Passage stretch limousines and party buses for weddings, airport transfers, group outings and events throughout the Lower Mainland.", template: fleet },
+  "/book-a-ride": { title: "Book a Limousine or Party Bus in Surrey, BC | Posh Passage", description: "Request your chauffeur-driven limousine or party bus in Surrey, Metro Vancouver, the Fraser Valley or Whistler. Get a ride quote from Posh Passage Limousines.", template: booking },
+  "/book-a-ride.html": { title: "Book a Limousine or Party Bus in Surrey, BC | Posh Passage", description: "Request your chauffeur-driven limousine or party bus in Surrey, Metro Vancouver, the Fraser Valley or Whistler. Get a ride quote from Posh Passage Limousines.", template: booking },
+  "/faq": { title: "Limousine & Party Bus FAQ | Posh Passage Limousines", description: "Get answers about booking a limousine or party bus with Posh Passage Limousines, including service areas, pricing, deposits, airport pickups and Whistler trips.", template: faq },
+  "/faq.html": { title: "Limousine & Party Bus FAQ | Posh Passage Limousines", description: "Get answers about booking a limousine or party bus with Posh Passage Limousines, including service areas, pricing, deposits, airport pickups and Whistler trips.", template: faq },
+  "/contact": { title: "Contact a Surrey Limousine Service | Posh Passage Limousines", description: "Contact Posh Passage Limousines to book a chauffeur, limousine or party bus in Surrey, Metro Vancouver and the Lower Mainland. Call (672) 377-3932.", template: contact },
+  "/contact.html": { title: "Contact a Surrey Limousine Service | Posh Passage Limousines", description: "Contact Posh Passage Limousines to book a chauffeur, limousine or party bus in Surrey, Metro Vancouver and the Lower Mainland. Call (672) 377-3932.", template: contact },
 };
 
 const legacyRoutes = {
@@ -48,6 +48,28 @@ function bodyOf(documentHtml) {
   return parsed.querySelector("template#page-template, template#home-template")?.innerHTML || parsed.body.innerHTML;
 }
 
+function setMeta(name, content, property = false) {
+  const selector = property ? `meta[property="${name}"]` : `meta[name="${name}"]`;
+  let element = document.head.querySelector(selector);
+  if (!element) {
+    element = document.createElement("meta");
+    element.setAttribute(property ? "property" : "name", name);
+    document.head.appendChild(element);
+  }
+  element.setAttribute("content", content);
+}
+
+function setStructuredData(id, data) {
+  let element = document.getElementById(id);
+  if (!element) {
+    element = document.createElement("script");
+    element.id = id;
+    element.type = "application/ld+json";
+    document.head.appendChild(element);
+  }
+  element.textContent = JSON.stringify(data);
+}
+
 export default function App() {
   const [location, setLocation] = useState(() => window.location.pathname + window.location.search);
   const path = cleanLocation(location).split("?")[0];
@@ -66,8 +88,47 @@ export default function App() {
 
   useEffect(() => {
     document.title = page.title;
+    const canonicalUrl = new URL(path === "/home" ? "/" : path, window.location.origin).href;
+    let canonical = document.head.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement("link");
+      canonical.rel = "canonical";
+      document.head.appendChild(canonical);
+    }
+    canonical.href = canonicalUrl;
+    setMeta("description", page.description);
+    setMeta("robots", "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1");
+    setMeta("og:type", "website", true);
+    setMeta("og:site_name", "Posh Passage Limousines", true);
+    setMeta("og:title", page.title, true);
+    setMeta("og:description", page.description, true);
+    setMeta("og:url", canonicalUrl, true);
+    setMeta("twitter:card", "summary");
+    setMeta("twitter:title", page.title);
+    setMeta("twitter:description", page.description);
+    setStructuredData("local-business-schema", {
+      "@context": "https://schema.org",
+      "@type": "LimousineService",
+      name: "Posh Passage Limousines",
+      url: new URL("/", window.location.origin).href,
+      telephone: "+1-672-377-3932",
+      email: "poshpassagelimosines@gmail.com",
+      address: { "@type": "PostalAddress", streetAddress: "1959 152 St", addressLocality: "Surrey", addressRegion: "BC", addressCountry: "CA" },
+      areaServed: ["Surrey", "Metro Vancouver", "Lower Mainland", "Fraser Valley", "Whistler", "Squamish"],
+      serviceType: ["Limousine service", "Party bus service", "Airport transfer", "Wedding transportation", "Corporate transportation"]
+    });
+    if (path === "/faq") {
+      const questions = [...document.querySelectorAll(".faq-item")].map((item) => ({
+        "@type": "Question",
+        name: item.querySelector("summary")?.childNodes[0]?.textContent.trim(),
+        acceptedAnswer: { "@type": "Answer", text: item.querySelector("p")?.textContent.trim() }
+      }));
+      setStructuredData("faq-schema", { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: questions });
+    } else {
+      document.getElementById("faq-schema")?.remove();
+    }
     window.scrollTo(0, 0);
-  }, [page]);
+  }, [page, path]);
 
   useEffect(() => {
     const onPopState = () => setLocation(window.location.pathname + window.location.search);
