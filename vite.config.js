@@ -17,6 +17,16 @@ export default defineConfig({
         booking: resolve(import.meta.dirname, "book-a-ride.html"),
         faq: resolve(import.meta.dirname, "faq.html"),
         contact: resolve(import.meta.dirname, "contact.html"),
+        wedding: resolve(import.meta.dirname, "surrey-wedding-limo.html"),
+        airport: resolve(import.meta.dirname, "yvr-airport-transfer-limo.html"),
+        partyBus: resolve(
+          import.meta.dirname,
+          "vancouver-party-bus-rental.html",
+        ),
+        whistler: resolve(
+          import.meta.dirname,
+          "whistler-limousine-transfer.html",
+        ),
       },
     },
   },

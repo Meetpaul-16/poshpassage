@@ -6,9 +6,13 @@ import fleet from "../fleet.html?raw";
 import booking from "../book-a-ride.html?raw";
 import faq from "../faq.html?raw";
 import contact from "../contact.html?raw";
+import surreyWeddingLimo from "../surrey-wedding-limo.html?raw";
+import yvrAirportTransferLimo from "../yvr-airport-transfer-limo.html?raw";
+import vancouverPartyBusRental from "../vancouver-party-bus-rental.html?raw";
+import whistlerLimousineTransfer from "../whistler-limousine-transfer.html?raw";
 
 const pages = {
-  "/home": { title: "Limousine & Party Bus Service in Surrey, BC | Posh Passage", description: "Book a chauffeured limousine or party bus in Surrey, Metro Vancouver and the Lower Mainland. Airport transfers, weddings, wine tours and Whistler trips.", template: home },
+  "/home": { title: "Surrey Limousine & Party Bus Service | Posh Passage", description: "Chauffeured stretch limousines and party buses serving Surrey, Metro Vancouver, Fraser Valley, and Whistler. Available 24/7. Request a quote today.", template: home },
   "/about": { title: "About Our Surrey Chauffeur Service | Posh Passage Limousines", description: "Learn about Posh Passage Limousines, a Surrey-based chauffeur service providing punctual, professional travel across Metro Vancouver and the Lower Mainland.", template: about },
   "/about.html": { title: "About Our Surrey Chauffeur Service | Posh Passage Limousines", description: "Learn about Posh Passage Limousines, a Surrey-based chauffeur service providing punctual, professional travel across Metro Vancouver and the Lower Mainland.", template: about },
   "/services": { title: "Limousine & Party Bus Services in Metro Vancouver | Posh Passage", description: "Chauffeured airport transfers, wedding limos, corporate travel, party buses, wine tours and Whistler trips from Surrey across Metro Vancouver and the Lower Mainland.", template: services },
@@ -21,6 +25,10 @@ const pages = {
   "/faq.html": { title: "Limousine & Party Bus FAQ | Posh Passage Limousines", description: "Get answers about booking a limousine or party bus with Posh Passage Limousines, including service areas, pricing, deposits, airport pickups and Whistler trips.", template: faq },
   "/contact": { title: "Contact a Surrey Limousine Service | Posh Passage Limousines", description: "Contact Posh Passage Limousines to book a chauffeur, limousine or party bus in Surrey, Metro Vancouver and the Lower Mainland. Call (672) 377-3932.", template: contact },
   "/contact.html": { title: "Contact a Surrey Limousine Service | Posh Passage Limousines", description: "Contact Posh Passage Limousines to book a chauffeur, limousine or party bus in Surrey, Metro Vancouver and the Lower Mainland. Call (672) 377-3932.", template: contact },
+  "/surrey-wedding-limo.html": { title: "Wedding Limousine Rental Surrey BC | Posh Passage", description: "Book a wedding limousine rental in Surrey, BC with Posh Passage. Chauffeured transportation for ceremonies, receptions, wedding parties and guests.", template: surreyWeddingLimo },
+  "/yvr-airport-transfer-limo.html": { title: "Surrey to YVR Airport Limo Service | Posh Passage", description: "Reserve a reliable Surrey to YVR airport limo service with Posh Passage. Enjoy professional chauffeurs, flexible pickup times and comfortable airport transfers.", template: yvrAirportTransferLimo },
+  "/vancouver-party-bus-rental.html": { title: "Party Bus Rental Surrey Vancouver | Posh Passage", description: "Plan your celebration with a party bus rental from Surrey to Vancouver. Posh Passage provides comfortable group transportation for events and nights out.", template: vancouverPartyBusRental },
+  "/whistler-limousine-transfer.html": { title: "Whistler Limo Service Sea to Sky | Posh Passage", description: "Travel in comfort with Whistler limo service along the Sea to Sky corridor. Posh Passage offers private chauffeured transfers from Surrey and Metro Vancouver.", template: whistlerLimousineTransfer },
 };
 
 const legacyRoutes = {
@@ -35,6 +43,10 @@ const legacyRoutes = {
   "/book-a-ride.html": "/book-a-ride",
   "/faq.html": "/faq",
   "/contact.html": "/contact",
+  "/surrey-wedding-limo.html": "/surrey-wedding-limo.html",
+  "/yvr-airport-transfer-limo.html": "/yvr-airport-transfer-limo.html",
+  "/vancouver-party-bus-rental.html": "/vancouver-party-bus-rental.html",
+  "/whistler-limousine-transfer.html": "/whistler-limousine-transfer.html",
 };
 
 function cleanLocation(value) {
@@ -110,12 +122,12 @@ export default function App() {
       "@context": "https://schema.org",
       "@type": "LimousineService",
       name: "Posh Passage Limousines",
-      url: new URL("/", window.location.origin).href,
-      telephone: "+1-672-377-3932",
-      email: "poshpassagelimosines@gmail.com",
+      image: "https://www.poshpassagelimousine.ca/index.html",
+      telephone: "+16723773932",
+      email: "poshpassagelimousine@gmail.com",
       address: { "@type": "PostalAddress", streetAddress: "1959 152 St", addressLocality: "Surrey", addressRegion: "BC", addressCountry: "CA" },
-      areaServed: ["Surrey", "Metro Vancouver", "Lower Mainland", "Fraser Valley", "Whistler", "Squamish"],
-      serviceType: ["Limousine service", "Party bus service", "Airport transfer", "Wedding transportation", "Corporate transportation"]
+      areaServed: ["Surrey", "Vancouver", "Burnaby", "Richmond", "Langley", "Coquitlam", "Abbotsford", "Whistler"],
+      url: "https://www.poshpassagelimousine.ca"
     });
     if (path === "/faq") {
       const questions = [...document.querySelectorAll(".faq-item")].map((item) => ({
