@@ -1,27 +1,3 @@
 {
-  "cleanUrls": true,
-  "rewrites": [
-    { "source": "/about", "destination": "/about.html" },
-    { "source": "/book", "destination": "/book.html" },
-    { "source": "/contact", "destination": "/contact.html" },
-    { "source": "/faq", "destination": "/faq.html" },
-    { "source": "/fleet", "destination": "/fleet.html" },
-    { "source": "/services", "destination": "/services.html" },
-    {
-      "source": "/surrey-wedding-limo",
-      "destination": "/surrey-wedding-limo.html"
-    },
-    {
-      "source": "/vancouver-party-bus-rental",
-      "destination": "/vancouver-party-bus-rental.html"
-    },
-    {
-      "source": "/whistler-limousine-transfer",
-      "destination": "/whistler-limousine-transfer.html"
-    },
-    {
-      "source": "/yvr-airport-transfer-limo",
-      "destination": "/yvr-airport-transfer-limo.html"
-    }
-  ]
+  "cleanUrls": true
 }

@@ -1,15 +1,15 @@
 const paths = [
-  "/",
+  "/home",
   "/about",
-  "/services",
+  "/service",
   "/fleet",
   "/book",
   "/faq",
   "/contact",
-  "/surrey-wedding-limo.html",
-  "/yvr-airport-transfer-limo.html",
-  "/vancouver-party-bus-rental.html",
-  "/whistler-limousine-transfer.html",
+  "/surrey-wedding-limo",
+  "/yvr-airport-transfer-limo",
+  "/vancouver-party-bus-rental",
+  "/whistler-limousine-transfer",
 ];
 
 export default function handler(request, response) {

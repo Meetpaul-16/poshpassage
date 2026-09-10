@@ -4,19 +4,15 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "server": "node server.js",
-    "build": "vite build && node scripts/prerender.js",
-    "preview": "vite preview",
-    "start": "node server.js"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
   "dependencies": {
-    "@vitejs/plugin-react": "latest",
     "dotenv": "^16.4.7",
-    "express": "^4.21.2",
+    "next": "latest",
     "nodemailer": "^6.10.1",
     "react": "latest",
-    "react-dom": "latest",
-    "vite": "latest"
+    "react-dom": "latest"
   }
 }

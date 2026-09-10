@@ -122,7 +122,7 @@ export default function App() {
       "@context": "https://schema.org",
       "@type": "LimousineService",
       name: "Posh Passage Limousines",
-      image: "https://www.poshpassagelimousine.ca/index.html",
+      image: "https://www.poshpassagelimousine.ca/home",
       telephone: "+16723773932",
       email: "poshpassagelimousine@gmail.com",
       address: { "@type": "PostalAddress", streetAddress: "1959 152 St", addressLocality: "Surrey", addressRegion: "BC", addressCountry: "CA" },
