@@ -1,5 +1,4 @@
 {
-  "cleanUrls": true,
   "framework": "nextjs",
-  "outputDirectory": ".next"
+  "cleanUrls": true
 }
