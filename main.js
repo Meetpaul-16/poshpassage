@@ -486,7 +486,7 @@
        Pre-select occasion from Services page
        
        Example:
-       book-a-ride.html?occasion=Weddings
+       book.html?occasion=Weddings
     ------------------------------------------------------- */
     var params = new URLSearchParams(
       location.search
@@ -518,7 +518,7 @@
        Pre-select vehicle from Fleet page
        
        Example:
-       book-a-ride.html?vehicle=Party%20Bus
+       book.html?vehicle=Party%20Bus
     ------------------------------------------------------- */
     var vehicleParam = params.get("vehicle");
 

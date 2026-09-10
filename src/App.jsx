@@ -3,7 +3,7 @@ import home from "../index.html?raw";
 import about from "../about.html?raw";
 import services from "../services.html?raw";
 import fleet from "../fleet.html?raw";
-import booking from "../book-a-ride.html?raw";
+import booking from "../book.html?raw";
 import faq from "../faq.html?raw";
 import contact from "../contact.html?raw";
 import surreyWeddingLimo from "../surrey-wedding-limo.html?raw";
@@ -19,8 +19,8 @@ const pages = {
   "/services.html": { title: "Limousine & Party Bus Services in Metro Vancouver | Posh Passage", description: "Chauffeured airport transfers, wedding limos, corporate travel, party buses, wine tours and Whistler trips from Surrey across Metro Vancouver and the Lower Mainland.", template: services },
   "/fleet": { title: "Stretch Limousines & Party Buses in Surrey, BC | Posh Passage", description: "Explore Posh Passage stretch limousines and party buses for weddings, airport transfers, group outings and events throughout the Lower Mainland.", template: fleet },
   "/fleet.html": { title: "Stretch Limousines & Party Buses in Surrey, BC | Posh Passage", description: "Explore Posh Passage stretch limousines and party buses for weddings, airport transfers, group outings and events throughout the Lower Mainland.", template: fleet },
-  "/book-a-ride": { title: "Book a Limousine or Party Bus in Surrey, BC | Posh Passage", description: "Request your chauffeur-driven limousine or party bus in Surrey, Metro Vancouver, the Fraser Valley or Whistler. Get a ride quote from Posh Passage Limousines.", template: booking },
-  "/book-a-ride.html": { title: "Book a Limousine or Party Bus in Surrey, BC | Posh Passage", description: "Request your chauffeur-driven limousine or party bus in Surrey, Metro Vancouver, the Fraser Valley or Whistler. Get a ride quote from Posh Passage Limousines.", template: booking },
+  "/book": { title: "Book a Limousine or Party Bus in Surrey, BC | Posh Passage", description: "Request your chauffeur-driven limousine or party bus in Surrey, Metro Vancouver, the Fraser Valley or Whistler. Get a ride quote from Posh Passage Limousines.", template: booking },
+  "/book.html": { title: "Book a Limousine or Party Bus in Surrey, BC | Posh Passage", description: "Request your chauffeur-driven limousine or party bus in Surrey, Metro Vancouver, the Fraser Valley or Whistler. Get a ride quote from Posh Passage Limousines.", template: booking },
   "/faq": { title: "Limousine & Party Bus FAQ | Posh Passage Limousines", description: "Get answers about booking a limousine or party bus with Posh Passage Limousines, including service areas, pricing, deposits, airport pickups and Whistler trips.", template: faq },
   "/faq.html": { title: "Limousine & Party Bus FAQ | Posh Passage Limousines", description: "Get answers about booking a limousine or party bus with Posh Passage Limousines, including service areas, pricing, deposits, airport pickups and Whistler trips.", template: faq },
   "/contact": { title: "Contact a Surrey Limousine Service | Posh Passage Limousines", description: "Contact Posh Passage Limousines to book a chauffeur, limousine or party bus in Surrey, Metro Vancouver and the Lower Mainland. Call (672) 377-3932.", template: contact },
@@ -40,7 +40,7 @@ const legacyRoutes = {
   "/service": "/services",
   "/service.html": "/services",
   "/fleet.html": "/fleet",
-  "/book-a-ride.html": "/book-a-ride",
+  "/book.html": "/book",
   "/faq.html": "/faq",
   "/contact.html": "/contact",
   "/surrey-wedding-limo.html": "/surrey-wedding-limo.html",

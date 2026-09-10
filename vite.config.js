@@ -14,7 +14,7 @@ export default defineConfig({
         about: resolve(import.meta.dirname, "about.html"),
         services: resolve(import.meta.dirname, "services.html"),
         fleet: resolve(import.meta.dirname, "fleet.html"),
-        booking: resolve(import.meta.dirname, "book-a-ride.html"),
+        booking: resolve(import.meta.dirname, "book.html"),
         faq: resolve(import.meta.dirname, "faq.html"),
         contact: resolve(import.meta.dirname, "contact.html"),
         wedding: resolve(import.meta.dirname, "surrey-wedding-limo.html"),

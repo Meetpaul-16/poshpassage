@@ -6,7 +6,7 @@ const pages = [
   "about.html",
   "services.html",
   "fleet.html",
-  "book-a-ride.html",
+  "book.html",
   "faq.html",
   "contact.html",
   "surrey-wedding-limo.html",

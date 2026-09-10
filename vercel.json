@@ -2,7 +2,7 @@
   "cleanUrls": true,
   "rewrites": [
     { "source": "/about", "destination": "/about.html" },
-    { "source": "/book-a-ride", "destination": "/book-a-ride.html" },
+    { "source": "/book", "destination": "/book.html" },
     { "source": "/contact", "destination": "/contact.html" },
     { "source": "/faq", "destination": "/faq.html" },
     { "source": "/fleet", "destination": "/fleet.html" },

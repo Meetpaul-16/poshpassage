@@ -3,7 +3,7 @@ const paths = [
   "/about",
   "/services",
   "/fleet",
-  "/book-a-ride",
+  "/book",
   "/faq",
   "/contact",
   "/surrey-wedding-limo.html",
