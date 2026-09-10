@@ -1,6 +1,5 @@
 import { notFound } from "next/navigation";
 import { readFile } from "node:fs/promises";
-import path from "node:path";
 
 const pageConfig = {
   home: ["index.html", "Surrey Limousine & Party Bus Service | Posh Passage", "Chauffeured stretch limousines and party buses serving Surrey, Metro Vancouver, Fraser Valley, and Whistler. Available 24/7. Request a quote today."],
@@ -14,6 +13,20 @@ const pageConfig = {
   "yvr-airport-transfer-limo": ["yvr-airport-transfer-limo.html", "Surrey to YVR Airport Limo Service | Posh Passage", "Reserve a reliable Surrey to YVR airport limo service with Posh Passage. Enjoy professional chauffeurs, flexible pickup times and comfortable airport transfers."],
   "vancouver-party-bus-rental": ["vancouver-party-bus-rental.html", "Party Bus Rental Surrey Vancouver | Posh Passage", "Plan your celebration with a party bus rental from Surrey to Vancouver. Posh Passage provides comfortable group transportation for events and nights out."],
   "whistler-limousine-transfer": ["whistler-limousine-transfer.html", "Whistler Limo Service Sea to Sky | Posh Passage", "Travel in comfort with Whistler limo service along the Sea to Sky corridor. Posh Passage offers private chauffeured transfers from Surrey and Metro Vancouver."],
+};
+
+const templatePaths = {
+  "index.html": readFile("index.html", "utf8"),
+  "about.html": readFile("about.html", "utf8"),
+  "services.html": readFile("services.html", "utf8"),
+  "fleet.html": readFile("fleet.html", "utf8"),
+  "book.html": readFile("book.html", "utf8"),
+  "faq.html": readFile("faq.html", "utf8"),
+  "contact.html": readFile("contact.html", "utf8"),
+  "surrey-wedding-limo.html": readFile("surrey-wedding-limo.html", "utf8"),
+  "yvr-airport-transfer-limo.html": readFile("yvr-airport-transfer-limo.html", "utf8"),
+  "vancouver-party-bus-rental.html": readFile("vancouver-party-bus-rental.html", "utf8"),
+  "whistler-limousine-transfer.html": readFile("whistler-limousine-transfer.html", "utf8"),
 };
 
 function getPage(slug = []) {
@@ -51,6 +64,6 @@ export default async function Page({ params }) {
   const page = getPage(slug);
   if (!page) notFound();
 
-  const html = await readFile(path.join(process.cwd(), page[0]), "utf8");
+  const html = await templatePaths[page[0]];
   return <div dangerouslySetInnerHTML={{ __html: extractBody(html) }} />;
 }

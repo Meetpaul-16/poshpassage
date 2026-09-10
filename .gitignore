@@ -2,3 +2,11 @@ node_modules/
 dist/
 .env
 .env.example
+
+# Next.js build output
+.next/
+out/
+
+# Node modules & logs
+node_modules/
+*.log
