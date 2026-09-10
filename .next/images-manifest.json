@@ -43,7 +43,8 @@
     ],
     "remotePatterns": [],
     "qualities": [
-      75
+      75,
+      80
     ],
     "unoptimized": false,
     "customCacheHandler": false,

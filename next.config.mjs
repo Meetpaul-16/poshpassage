@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  images: {
+    qualities: [75, 80],
+  },
   async redirects() {
     return [
       { source: "/", destination: "/home", permanent: true },

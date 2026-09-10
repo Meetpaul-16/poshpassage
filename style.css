@@ -5,8 +5,6 @@
    the literal materials of a chauffeured car — rather than a generic dark UI.
    ========================================================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;1,6..96,500&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap');
-
 :root{
   /* --- colour: named to what they represent, not what they look like --- */
   --midnight:#0a0b0f;      /* base background — night sky over the Fraser Valley */
@@ -21,9 +19,9 @@
   --garnet-light:#c04a5e;  /* hover / lit state */
   --garnet-dim:#5c1c28;    /* pressed / shadow state */
 
-  --font-display:'Bodoni Moda', Georgia, serif;
-  --font-body:'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-ui:'Space Grotesk', -apple-system, sans-serif;
+  --font-display:var(--font-bodoni-moda), Georgia, serif;
+  --font-body:var(--font-inter), -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-ui:var(--font-space-grotesk), -apple-system, sans-serif;
 
   --container:1180px;
   --radius-sm:6px;
