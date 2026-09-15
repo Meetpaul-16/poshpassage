@@ -109,6 +109,12 @@
       "regex": "^/api/contact(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/api/contact(?:/)?$"
+    },
+    {
+      "page": "/icon.png",
+      "regex": "^/icon\\.png(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/icon\\.png(?:/)?$"
     }
   ],
   "dataRoutes": [],

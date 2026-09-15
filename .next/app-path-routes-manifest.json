@@ -3,5 +3,6 @@
   "/_global-error/page": "/_global-error",
   "/_not-found/page": "/_not-found",
   "/api/booking/route": "/api/booking",
-  "/api/contact/route": "/api/contact"
+  "/api/contact/route": "/api/contact",
+  "/icon.png/route": "/icon.png"
 }

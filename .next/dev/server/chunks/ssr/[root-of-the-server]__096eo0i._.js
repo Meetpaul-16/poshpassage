@@ -108,7 +108,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$site$2d$client$2e$jsx
 const metadata = {
     metadataBase: new URL("https://www.poshpassagelimousine.ca"),
     icons: {
-        icon: "/images/posh-passage-logo.png"
+        icon: "/images/logo.png"
     }
 };
 function RootLayout({ children }) {

@@ -26,7 +26,7 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata = {
   metadataBase: new URL("https://www.poshpassagelimousine.ca"),
-  icons: { icon: "/images/posh-passage-logo.png" },
+  icons: { icon: "/images/logo.png" },
 };
 
 export default function RootLayout({ children }) {
