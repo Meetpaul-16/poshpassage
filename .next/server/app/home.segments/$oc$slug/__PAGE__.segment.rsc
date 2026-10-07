@@ -1,5 +1,5 @@
 1:"$Sreact.fragment"
-2:T5946,
+2:T59ad,
 
     <header class="site-header">
       <div class="container">
@@ -37,9 +37,9 @@
         <div class="container">
           <div class="hero-copy">
             <p class="eyebrow">Chauffeured Travel · Lower Mainland to Whistler</p>
-            <h1>Surrey Limousine<br>&amp; Party Bus Service.</h1>
-            <p class="lede">Professional chauffeurs, immaculate stretch limousines and party buses — serving Metro
-              Vancouver, the Fraser Valley, USA Seattle Airport and the Sea-to-Sky corridor, day or night.</p>
+            <h1>Limo Service Surrey<br>&amp; Party Bus Rentals.</h1>
+            <p class="lede">Professional chauffeurs, stretch limousines and party buses from our Surrey base at
+              1959 152 St, serving Metro Vancouver, the Fraser Valley and the Sea-to-Sky corridor, day or night.</p>
             <div class="hero-actions">
               <a href="/book" class="btn btn-primary">Book a Ride</a>
               <a href="tel:+16723773932" class="btn btn-ghost">
@@ -279,8 +279,9 @@
             <div class="stack">
               <p class="eyebrow">Where We Drive</p>
               <h2>Metro Vancouver To The Mountains</h2>
-              <p class="lede" style="margin-top:14px;">Based in Surrey, running the whole Lower Mainland, the Fraser
-                Valley and the Sea-to-Sky corridor up to Whistler.</p>
+              <p class="lede" style="margin-top:14px;">Based at 1959 152 St in Surrey, BC, serving the Lower Mainland,
+                the Fraser Valley and the Sea-to-Sky corridor up to Whistler. Choose a stretch limousine, SUV limousine
+                or party bus for your trip.</p>
             </div>
           </div>
           <div class="area-pill-row reveal">
@@ -432,7 +433,7 @@
   5:X
 a:X
 a:C
-0:{"buildId":"CmOJhk3ISk3oFXqfdC0ZR","data":[{"rsc":["$","$1","c",{"children":[["$","div",null,{"dangerouslySetInnerHTML":{"__html":"$2"}}],null,"$L3"]}],"isPartial":"$@4","staleTime":"$5","varyParams":null},{"rsc":"$L6","isPartial":"$@7","staleTime":"$5","varyParams":null},{"rsc":"$L8","isPartial":"$@9","staleTime":"$5","varyParams":"$a"},{"rsc":"$Lb","isPartial":"$@c","staleTime":"$5","varyParams":null}],"isUpgradeableISRFallback":false,"a":"$@d","rootVaryParams":null,"needsRuntimeRequest":"$@e"}
+0:{"buildId":"2rIqSu9RbcEqL3S57mMGh","data":[{"rsc":["$","$1","c",{"children":[["$","div",null,{"dangerouslySetInnerHTML":{"__html":"$2"}}],null,"$L3"]}],"isPartial":"$@4","staleTime":"$5","varyParams":null},{"rsc":"$L6","isPartial":"$@7","staleTime":"$5","varyParams":null},{"rsc":"$L8","isPartial":"$@9","staleTime":"$5","varyParams":"$a"},{"rsc":"$Lb","isPartial":"$@c","staleTime":"$5","varyParams":null}],"isUpgradeableISRFallback":false,"a":"$@d","rootVaryParams":null,"needsRuntimeRequest":"$@e"}
 f:I[97367,["/_next/static/chunks/195vso9a1b13t.js"],"OutletBoundary"]
 10:"$Sreact.suspense"
 12:I[97367,["/_next/static/chunks/195vso9a1b13t.js"],"ViewportBoundary"]
@@ -442,11 +443,11 @@ f:I[97367,["/_next/static/chunks/195vso9a1b13t.js"],"OutletBoundary"]
 16:I[37457,["/_next/static/chunks/195vso9a1b13t.js"],"default"]
 17:I[49322,["/_next/static/chunks/195vso9a1b13t.js"],"default"]
 18:I[79520,["/_next/static/chunks/195vso9a1b13t.js"],""]
-:HL["/_next/static/chunks/0dv3-a5fsbcjj.css","style"]
+:HL["/_next/static/chunks/2-zf_ga6hqx21.css","style"]
 3:["$","$Lf",null,{"children":["$","$10",null,{"name":"Next.MetadataOutlet","children":"$@11"}]}]
-6:["$","$1","h",{"children":[null,["$","$L12",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L13",null,{"children":["$","$10",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Surrey Limousine & Party Bus Service | Posh Passage"}],["$","meta","1",{"name":"description","content":"Chauffeured stretch limousines and party buses serving Surrey, Metro Vancouver, Fraser Valley, and Whistler. Available 24/7. Request a quote today."}],["$","link","2",{"rel":"canonical","href":"https://www.poshpassagelimousine.ca/home"}],["$","meta","3",{"property":"og:title","content":"Surrey Limousine & Party Bus Service | Posh Passage"}],["$","meta","4",{"property":"og:description","content":"Chauffeured stretch limousines and party buses serving Surrey, Metro Vancouver, Fraser Valley, and Whistler. Available 24/7. Request a quote today."}],["$","meta","5",{"property":"og:type","content":"website"}],["$","meta","6",{"name":"twitter:card","content":"summary"}],["$","meta","7",{"name":"twitter:title","content":"Surrey Limousine & Party Bus Service | Posh Passage"}],["$","meta","8",{"name":"twitter:description","content":"Chauffeured stretch limousines and party buses serving Surrey, Metro Vancouver, Fraser Valley, and Whistler. Available 24/7. Request a quote today."}],["$","link","9",{"rel":"icon","href":"/images/logo.png"}],["$","$L14","10",{}]]}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
+6:["$","$1","h",{"children":[null,["$","$L12",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L13",null,{"children":["$","$10",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Limo Service Surrey | Posh Passage Limousine"}],["$","meta","1",{"name":"description","content":"Posh Passage Limousine provides chauffeured stretch limousines, SUV limousines and party buses from Surrey across Metro Vancouver, the Fraser Valley and Whistler."}],["$","link","2",{"rel":"canonical","href":"https://www.poshpassagelimousine.ca/home"}],["$","meta","3",{"property":"og:title","content":"Limo Service Surrey | Posh Passage Limousine"}],["$","meta","4",{"property":"og:description","content":"Posh Passage Limousine provides chauffeured stretch limousines, SUV limousines and party buses from Surrey across Metro Vancouver, the Fraser Valley and Whistler."}],["$","meta","5",{"property":"og:type","content":"website"}],["$","meta","6",{"name":"twitter:card","content":"summary"}],["$","meta","7",{"name":"twitter:title","content":"Limo Service Surrey | Posh Passage Limousine"}],["$","meta","8",{"name":"twitter:description","content":"Posh Passage Limousine provides chauffeured stretch limousines, SUV limousines and party buses from Surrey across Metro Vancouver, the Fraser Valley and Whistler."}],["$","link","9",{"rel":"icon","href":"/images/logo.png"}],["$","$L14","10",{}]]}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
 8:["$","$1","c",{"children":[null,["$","$L15",null,{"parallelRouterKey":"children","template":["$","$L16",null,{}]}]]}]
-b:["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/0dv3-a5fsbcjj.css","precedence":"next"}],["$","script","script-0",{"src":"/_next/static/chunks/195vso9a1b13t.js","async":true}]],["$","html",null,{"lang":"en","className":"bodoni_moda_6aa76d5b-module__dfxwzW__variable inter_d283afda-module__nJeQYG__variable space_grotesk_30a8ae37-module__ItXxGW__variable","children":["$","body",null,{"children":[["$","$L15",null,{"parallelRouterKey":"children","template":["$","$L16",null,{}],"notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]]}],["$","$L17",null,{}],["$","$L18",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-2WJ29KXS71","strategy":"lazyOnload"}],["$","$L18",null,{"id":"google-analytics","strategy":"lazyOnload","children":"\n            window.dataLayer = window.dataLayer || [];\n            function gtag(){dataLayer.push(arguments);}\n            gtag('js', new Date());\n            gtag('config', 'G-2WJ29KXS71');\n          "}]]}]}]]}]
+b:["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/2-zf_ga6hqx21.css","precedence":"next"}],["$","script","script-0",{"src":"/_next/static/chunks/195vso9a1b13t.js","async":true}]],["$","html",null,{"lang":"en","className":"bodoni_moda_6aa76d5b-module__dfxwzW__variable inter_d283afda-module__nJeQYG__variable space_grotesk_30a8ae37-module__ItXxGW__variable","children":["$","body",null,{"children":[["$","$L15",null,{"parallelRouterKey":"children","template":["$","$L16",null,{}],"notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]]}],["$","$L17",null,{}],["$","$L18",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-2WJ29KXS71","strategy":"lazyOnload"}],["$","$L18",null,{"id":"google-analytics","strategy":"lazyOnload","children":"\n            window.dataLayer = window.dataLayer || [];\n            function gtag(){dataLayer.push(arguments);}\n            gtag('js', new Date());\n            gtag('config', 'G-2WJ29KXS71');\n          "}]]}]}]]}]
 11:null
 e:true
 5:300

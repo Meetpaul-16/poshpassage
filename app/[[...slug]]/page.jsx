@@ -2,9 +2,9 @@ import { notFound } from "next/navigation";
 import { readFile } from "node:fs/promises";
 
 const pageConfig = {
-  home: ["index.html", "Surrey Limousine & Party Bus Service | Posh Passage", "Chauffeured stretch limousines and party buses serving Surrey, Metro Vancouver, Fraser Valley, and Whistler. Available 24/7. Request a quote today."],
+  home: ["index.html", "Limo Service Surrey | Posh Passage Limousine", "Posh Passage Limousine provides chauffeured stretch limousines, SUV limousines and party buses from Surrey across Metro Vancouver, the Fraser Valley and Whistler."],
   about: ["about.html", "About Our Surrey Chauffeur Service | Posh Passage Limousines", "Learn about Posh Passage Limousines, a Surrey-based chauffeur service providing punctual, professional travel across Metro Vancouver and the Lower Mainland."],
-  service: ["services.html", "Limousine & Party Bus Services in Metro Vancouver | Posh Passage", "Chauffeured airport transfers, wedding limos, corporate travel, party buses, wine tours and Whistler trips from Surrey across Metro Vancouver and the Lower Mainland."],
+  service: ["services.html", "Surrey Party Bus & Limousine Rentals | Posh Passage", "Book a Surrey party bus or limousine for airport transfers, weddings, events and corporate travel. Serving Metro Vancouver, the Fraser Valley and Whistler."],
   fleet: ["fleet.html", "Stretch Limousines & Party Buses in Surrey, BC | Posh Passage", "Explore Posh Passage stretch limousines and party buses for weddings, airport transfers, group outings and events throughout the Lower Mainland."],
   book: ["book.html", "Book a Limousine or Party Bus in Surrey, BC | Posh Passage", "Request your chauffeur-driven limousine or party bus in Surrey, Metro Vancouver, the Fraser Valley or Whistler. Get a ride quote from Posh Passage Limousines."],
   faq: ["faq.html", "Limousine & Party Bus FAQ | Posh Passage Limousines", "Get answers about booking a limousine or party bus with Posh Passage Limousines, including service areas, pricing, deposits, airport pickups and Whistler trips."],
